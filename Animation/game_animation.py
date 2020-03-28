@@ -143,9 +143,10 @@ def make_plot(doc, df, headers, id_def, id_att, slider_steps, x_range, y_range,
 
     """
     def get_convex_hull(team_def, team_att, current_time):
-
-        team_att_t = np.vstack((team_att[team_att.time == current_time].x, team_att[team_att.time == current_time].y)).T
-        team_def_t = np.vstack((team_def[team_def.time == current_time].x, team_def[team_def.time == current_time].y)).T
+        team_att_no_gk = team_att[team_att['player_id'] != '1']
+        team_def_no_gk = team_def[team_def['player_id'] != '1']
+        team_att_t = np.vstack((team_att_no_gk[team_att_no_gk.time == current_time].x, team_att_no_gk[team_att_no_gk.time == current_time].y)).T
+        team_def_t = np.vstack((team_def_no_gk[team_def_no_gk.time == current_time].x, team_def_no_gk[team_def_no_gk.time == current_time].y)).T
 
         hull = ConvexHull(team_att_t)
         hull2 = ConvexHull(team_def_t)
