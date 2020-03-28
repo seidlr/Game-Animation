@@ -1,0 +1,13 @@
+name: game-animation
+channels:
+  - anaconda
+  - bokeh
+  - conda-forge
+  - defaults
+dependencies:
+  - bokeh=1.3.4
+  - ipykernel
+  - numpy
+  - pandas
+  - python=3.6
+  - scikit-learn
