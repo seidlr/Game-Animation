@@ -1,10 +1,42 @@
 
-Game Animation
-====
+# Game Animation
+
+`Note`: I've forked this repository from `https://github.com/samirak93/Game-Animation`. The code is not written by me. I just made some small changes to make it easier to use:
+- I've cleaned up unneccesary folders like `__pycache__` and `.ipynb_checkpoints`.
+- I've added a `.gitignore` file to keep the repository clean.
+- I've added an `environment.yml` file such that you can install all necessary requirements to run the notebooks.
+- I've changed the calculation of the convex hull of teams to not inlcude the goalkeeper.  
+  
+  
 An easy way to visualize player tracking data with animation. Built using [Bokeh Plots](https://github.com/bokeh/bokeh), this tool can be used to visualise player movements for all sport. It also includes visualising voronoi and convex hulls, player speed and total distance covered by each player, interactively.
 
-## New Features: 
+## Installation
+The interactive plots are provided in jupyter notebooks. The easiest way to get started is to use [Anaconda](https://www.anaconda.com/distribution/). 
+After installing Anaconda, follow these steps.
 
+Download the repository by clicking the download button on the top right or running the following command in the command line:
+```
+git clone https://github.com/seidlr/Game-Animation.git
+```
+Then change into the new directory
+```
+cd Game-Animation
+```
+and install all necessary dependencies into a fresh conda environment by running
+```
+conda env update
+```
+This will create a new environment callled `game-animation`. Activate it by running
+```
+conda activate game-animation
+```
+Now you are ready to run the jupyter notebook server.
+```
+jupyter notebook
+```
+
+
+## New Features: 
 Visualize players being marked by opposition players and find the distance between them. Statistics such as `total time player was marked`, `average distance between the players` can also be calculated and visualised. 
 
 
